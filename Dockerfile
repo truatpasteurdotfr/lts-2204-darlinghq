@@ -10,7 +10,8 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive  apt-get -y upgrade && \
 		libfreetype6-dev git git-lfs libelf-dev libxml2-dev libegl1-mesa-dev libfontconfig1-dev \
 		libbsd-dev libxrandr-dev libxcursor-dev libgif-dev libavutil-dev libpulse-dev \
 		libavformat-dev libavcodec-dev libswresample-dev libdbus-1-dev libxkbfile-dev \
-		libssl-dev libstdc++-12-dev && \
+		libssl-dev libstdc++-12-dev \
+		libcap2-bin && \
 	cd /opt && git clone --recursive https://github.com/darlinghq/darling.git && \
 	cd darling && \
 	tools/uninstall && \
