@@ -11,8 +11,8 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive  apt-get -y upgrade && \
 		libbsd-dev libxrandr-dev libxcursor-dev libgif-dev libavutil-dev libpulse-dev \
 		libavformat-dev libavcodec-dev libswresample-dev libdbus-1-dev libxkbfile-dev \
 		libssl-dev libstdc++-12-dev \
-		libcap2-bin && \
-	cd /opt && git clone --recursive https://github.com/darlinghq/darling.git && \
+		libcap2-bin
+RUN cd /opt && git clone --recursive https://github.com/darlinghq/darling.git && \
 	cd darling && \
 	tools/uninstall && \
 	mkdir build && cd build &&\
